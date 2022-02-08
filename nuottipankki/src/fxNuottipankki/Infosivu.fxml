@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxNuottipankki.InfoGUIController">
+   <center>
+      <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="Pikaohje:&#10;&#10;1. Hae kappaletta, säveltäjää, tyylisuuntaa, soitinta tai säveltäjän kotimaata valitsemalla valikosta ja kirjoittamalla hakusana tai sanan osa.&#10;&#10;2. Valitse haluamasi kohde hakutulosten listasta ja paina &quot;Avaa&quot;.&#10;&#10;3. Avaat muokkaussivun, jolla voit tarkastella kappaleen tai säveltäjän tietoja ja muokata niitä. Muutokset tallennat painamalla &quot;Tallenna&quot;-painiketta.&#10;&#10;4. Kappaleen tai säveltäjän tiedot voit poistaa valitsemalla kyseisen kohteen muokkaussivulla &quot;Poista&quot;.&#10;&#10;5. Kappaleen tai säveltäjän tiedot voit lisätä etusivulla valitsemalla &quot;Lisää kappale/säveltäjä&quot;." wrapText="true" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </TextArea>
+   </center>
+   <bottom>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="buttonClose" mnemonicParsing="false" onAction="#handleSulje" text="Sulje">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+   <left>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="25.0" />
+         </BorderPane.margin>
+         <top>
+            <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="Nuottipankki&#10;Sanna Paappanen&#10;9.6.2020" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </TextArea>
+         </top>
+         <bottom>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleTilastot" text="Tilastot" />
+               </children>
+               <BorderPane.margin>
+                  <Insets top="10.0" />
+               </BorderPane.margin>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </left>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER" />
+   </top>
+</BorderPane>
